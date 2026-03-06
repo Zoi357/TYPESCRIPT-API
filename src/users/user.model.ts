@@ -1,3 +1,4 @@
+import { any } from 'joi';
 import { DataTypes, Model, Optional } from 'sequelize';
 import type { Sequelize } from 'sequelize';
 
@@ -12,9 +13,10 @@ export interface UserAttributes {
     role: string;
     createdAt: Date;
     updatedAt: Date;
+    isVerified: boolean;
 }
 
-export interface UserCreationAttributes extends Optional<UserAttributes, 'id' | 'createdAt' | 'updatedAt'> {}
+export interface UserCreationAttributes extends Optional<UserAttributes, 'id' | 'createdAt' | 'updatedAt' | 'isVerified'> {}
 
 
 export class User
@@ -30,6 +32,7 @@ implements UserAttributes {
     public role!: string;
     public readonly createdAt!: Date;
     public readonly updatedAt!: Date;
+    public isVerified!: boolean;
 }
 
 export default function (sequelize: Sequelize): typeof User {
@@ -75,8 +78,14 @@ export default function (sequelize: Sequelize): typeof User {
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-  },
-  {
+       isVerified: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true,
+    },
+  }as any,
+  { 
+    
     sequelize,
     modelName: 'User',
     tableName: 'users',

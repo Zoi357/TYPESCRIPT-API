@@ -1,5 +1,5 @@
 #Midterm Defense Exam 
-**Student Name:**[Your Full Name]
-**Section**[Your Section]
-**Date*[Current Date]
+**Student Name:**[Zoilo Jay II M. Tomaquin ]
+**Section**[BC IT321]
+**Date*[March 6, 2025]
 **Status** Starting Live Defense

@@ -5,7 +5,6 @@
     "module": "commonjs",
     "target": "ES2020",
     
-    // FIX 1: Remove the empty array or add "node" back in
     "types": ["node"], 
 
     "lib": ["ES2020"],
@@ -15,8 +14,6 @@
     "strict": true,
     "esModuleInterop": true,
     
-    // FIX 2: Set this to false (or remove it) 
-    // It is too strict for a standard Express/Sequelize setup
     "verbatimModuleSyntax": false, 
     "isolatedModules": true,
     "skipLibCheck": true,
