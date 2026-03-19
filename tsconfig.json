@@ -18,12 +18,16 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "ignoreDeprecations": "6.0",
     "baseUrl": "./src",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "_helpers/*": ["_helpers/*"],
-      "_middleware/*":["_middleware/*"],
-      "_users/*":["_users/*"]
+      "_middleware/*": ["_middleware/*"],
+      "_users/*": ["users/*"],
+      "_employees/*": ["employees/*"],
+      "_accounts/*": ["accounts/*"],
+      "_departments/*": ["departments/*"],
+      "_requests/*": ["requests/*"]
     }
   },
   "include":["src/**/*"],
